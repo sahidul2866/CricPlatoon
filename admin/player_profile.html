@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Profile Update</title>
+
+    <link href="css/profile.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title"> <b> <u> Update Player Profile  </u> </b> </h2>
+                    <form action="http://127.0.0.1:8080/index.html" method="post" id="myform">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Player Name" name="name" id = "name">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Birth Date" name="B_date" id = "birth_date">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Birth Place" name="B_place" id = "birth_place">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Country" name="cntry" id = "country">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Team" name="team" id = "team">
+                        </div>
+			             <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="Age " name="age" id = "age">
+                        </div>
+			             <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="Total run in ODI" name="r_odi" id = "r_odi">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="Total run in Test" name="r_test" id = "r_test">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="Total run in T20" name="r_twen" id = "r_twen">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="Total wicket in ODI" name="w_odi" id = "w_odi">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="Total wicket in Test" name="w_test" id = "w_test">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="Total wicket in T20" name="w_twen" id = "w_twen">
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Batting Sytle" name="b_style" id = "b_style">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Bowling Sytle" name="bowl_style" id = bowl_style>
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="ICC ranking in Batting" name="b_rank" id = "b_rank">
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="ICC ranking in Bowling" name="bowl_rank" id = "bowl_rank">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Carrer" name="crer" id = "crer">
+                        </div>                
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit"> <b> Update </b> </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDryedKHD_fC7Pshnd2fO4k-lch_hVQhwE",
+    authDomain: "cricplatoonjs.firebaseapp.com",
+    databaseURL: "https://cricplatoonjs.firebaseio.com",
+    projectId: "cricplatoonjs",
+    storageBucket: "cricplatoonjs.appspot.com",
+    messagingSenderId: "701923593936"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="js/player_profile.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Score Update</title>
+
+    <link href="css/update.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title"> <b> <u> Update LiveScores  </u> </b> </h2>
+                    <form action="http://127.0.0.1:8080/index.html" method="post" id="myform">
+                      <div class="input-group">
+                          <input class="input--style-3" type="text" placeholder="Teams" name="Type" id = "Teams">
+                      </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Name of Batsman" name="name" id = "name">
+                        </div>
+			             <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="Runs " name="runs" id = "runs">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Name of Batsman" name="name" id = "name1">
+                        </div>
+			             <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="Runs " name="runs" id = "runs1">
+                        </div>
+			             <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="Current Rate " name="cr" id = "cr">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Opponent Score " name="Opponent" id = "Opponent">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="Overs" name="over" id = "over">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Required Rate" name="B_name" id = "RR">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Scores" name="score" id = "score">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Comments" name="cmnts" id = "cmnts">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Name of Bowling Team" name="Bowl_name" id = "Bow">
+                        </div>
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit"> <b> Update </b> </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDryedKHD_fC7Pshnd2fO4k-lch_hVQhwE",
+    authDomain: "cricplatoonjs.firebaseapp.com",
+    databaseURL: "https://cricplatoonjs.firebaseio.com",
+    projectId: "cricplatoonjs",
+    storageBucket: "cricplatoonjs.appspot.com",
+    messagingSenderId: "701923593936"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script src="update_live_score.js"></script>
+
+</body>
+</html>

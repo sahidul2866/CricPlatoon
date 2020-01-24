@@ -1,0 +1,42 @@
+body {
+  background: rgba(52, 152, 219, 0.25);
+  font: 18px 'Ubuntu', Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #f25757;
+}
+body * {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#pollContainer {
+  max-width: 400px;
+  margin: 3em auto;
+  padding: 1.5em 5px;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background: #f57d7d;
+}
+
+#pollButtons ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#pollButtons li {
+  border: 1px solid #fff;
+  margin: 5px auto;
+  padding: 15px 0;
+  color: #fff;
+  width: 45%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Poll </title>
+
+    <link href="css/update.css" rel="stylesheet" media="all">
+    <link href="css/signup1.css" rel="stylesheet" media="all">
+
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title"> <b> <u> Create a Poll  </u> </b> </h2>
+                    <form action="http://127.0.0.1:8080/index.html" method="post" id="myform">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Author" name="author_name" id = "author">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Title of the Poll" name="_title" id = "title">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Body of the Poll" name="news_body" id = "news_body">
+                        </div>               
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit"> <b> YES </b> </button>
+                        </div>
+                       <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit"> <b> NO </b> </button>
+                        </div>
+                        <p class="loginhere">
+                        To see the Poll result <a href="login.html" class="loginhere-link">Click Here</a>
+                    </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDryedKHD_fC7Pshnd2fO4k-lch_hVQhwE",
+    authDomain: "cricplatoonjs.firebaseapp.com",
+    databaseURL: "https://cricplatoonjs.firebaseio.com",
+    projectId: "cricplatoonjs",
+    storageBucket: "cricplatoonjs.appspot.com",
+    messagingSenderId: "701923593936"
+  };
+  firebase.initializeApp(config);
+</script>    
+    <script src="js/update_live_news.js"></script>
+
+</body>
+</html>
+

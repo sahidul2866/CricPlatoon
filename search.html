@@ -1,0 +1,98 @@
+ <html>
+  <head>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet" />
+    <link href="css/sreach.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/signup1.css">
+  </head>
+  <body>
+    <div class="main">
+
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form">
+                        <h2 class="form-title">SEARCHING</h2>
+          <div class="advance-search">
+            <span class="desc"> <b> SELECT COUNTRY AND PLAYER TO SEARCH</span>
+            <div class="row">
+              <div class="input-field">
+                <div class="input-select">
+                  <select data-trigger="" name="choices-single-defaul">
+                    <option placeholder="" value="">Choose Country</option>
+                    <option>Afganistan</option>
+                    <option>Australia</option>
+                    <option>Bangladesh</option>
+                    <option>England</option>
+                    <option>India</option>
+                    <option>New Zealand</option>
+                    <option>Pakistan</option>
+                    <option>South Africa</option>
+                    <option>Sri Lanka</option>
+                    <option>West Indies</option>
+                    <option>Zimbabwe</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                  <input type="text" class="form-input" name="name" placeholder="Enter Player Name" id = "p_name"/>
+              </div>
+              
+            <div class="row third">
+              <div class="input-field">
+                
+                <div class="group-btn">
+                	    <div class="form-group">
+                	    	<button  class="form-submit"> <a href="sreach_result.html"> SEARCH </a></button>
+                  <button  id="delete" class="form-submit">RESET</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </form>
+    <script src="js/choices.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+
+    <script>
+      const customSelects = document.querySelectorAll("select");
+      const deleteBtn = document.getElementById('delete')
+      const choices = new Choices('select',
+      {
+        searchEnabled: false,
+        itemSelectText: '',
+        removeItemButton: true,
+      });
+      for (let i = 0; i < customSelects.length; i++)
+      {
+        customSelects[i].addEventListener('addItem', function(event)
+        {
+          if (event.detail.value)
+          {
+            let parent = this.parentNode.parentNode
+            parent.classList.add('valid')
+            parent.classList.remove('invalid')
+          }
+          else
+          {
+            let parent = this.parentNode.parentNode
+            parent.classList.add('invalid')
+            parent.classList.remove('valid')
+          }
+        }, false);
+      }
+      deleteBtn.addEventListener("click", function(e)
+      {
+        e.preventDefault()
+        const deleteAll = document.querySelectorAll('.choices__button')
+        for (let i = 0; i < deleteAll.length; i++)
+        {
+          deleteAll[i].click();
+        }
+      });
+
+    </script>
+  </body>
+</html>
